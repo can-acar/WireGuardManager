@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace WireGuardManager.Api.Data;
+namespace WireGuardManager.Infrastructure.Data;
 
 public class ApplicationDbContext : DbContext
 {
