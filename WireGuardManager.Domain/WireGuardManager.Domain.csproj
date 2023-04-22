@@ -7,14 +7,14 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Folder Include="Enums\"/>
-        <Folder Include="Events\"/>
+        <Folder Include="Enums\" />
+        <Folder Include="Events\" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="FluentValidation" Version="11.5.2"/>
-        <PackageReference Include="MediatR.Extensions.FluentValidation.AspNetCore" Version="4.0.0"/>
-        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0"/>
+        <PackageReference Include="FluentValidation" Version="11.5.2" />
+        <PackageReference Include="MediatR.Extensions.FluentValidation.AspNetCore" Version="4.0.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
     </ItemGroup>
 
 </Project>

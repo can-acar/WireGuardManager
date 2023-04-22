@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace WireGuardManager.Api.Controllers;
 
 [ApiController]
-[Route("api/[controller]/[action]")]
+[Route("api/[controller]")]
 [ApiConventionType(typeof(DefaultApiConventions))]
 [Produces(MediaTypeNames.Application.Json)]
 public class UserController : ControllerBase
