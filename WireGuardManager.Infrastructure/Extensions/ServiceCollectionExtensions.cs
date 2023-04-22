@@ -17,10 +17,9 @@ public static class ServiceCollectionExtensions
         //services.AddTransient<LoggingMiddleware>();
 
         // register generic unit of work
-        services.AddScoped(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
+        //services.AddScoped(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
         services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-        
-        
+
 
         services.AddScoped<IUnitOfWork<ApplicationDbContext>, UnitOfWork<ApplicationDbContext>>();
 
