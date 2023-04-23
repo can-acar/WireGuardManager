@@ -65,7 +65,7 @@ try
     services.AddSingleton<ITrafficMonitorService, TrafficMonitorService>();
     services.AddSingleton<ITokenService, TokenService>();
     services.AddDbContext<ApplicationDbContext>();
-//services.ConfigureInfrastructureServices();
+    services.ConfigureInfrastructureServices();
     services.AddSwaggerGen();
 
 

@@ -2,15 +2,12 @@
 
 namespace WireGuardManager.Domain.Entities;
 
-public class User
+public class Authentication
 {
     public int Id { get; set; }
-    public string Username { get; set; }
+    public int UserId { get; set; }
     public string Password { get; set; }
-    public string Salt { get; set; }
-    public string Role { get; set; }
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
-    public bool IsDeleted { get; set; }
-    public bool IsEnabled { get; set; }
+    public int IsActive { get; set; }
 }

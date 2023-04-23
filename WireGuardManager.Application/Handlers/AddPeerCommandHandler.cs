@@ -1,5 +1,11 @@
-﻿namespace WireGuardManager.Application.Handlers;
+﻿using FluentValidation;
+using WireGuardManager.Domain.Requests;
 
-public class AddPeerCommandHandler
+namespace WireGuardManager.Application.Handlers;
+
+public class AddPeerCommandHandler : AbstractValidator<AddPeerRequest>
 {
+    public AddPeerCommandHandler()
+    {
+    }
 }

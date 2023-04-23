@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using WireGuardManager.Domain.Entities;
 using WireGuardManager.Domain.Interfaces;
 using WireGuardManager.Infrastructure.Data;
 using WireGuardManager.Infrastructure.Repositories;
@@ -25,4 +28,7 @@ public static class ServiceCollectionExtensions
 
         return services;
     }
+
+
+    
 }
