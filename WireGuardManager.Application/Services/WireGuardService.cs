@@ -1,4 +1,6 @@
-﻿namespace WireGuardManager.Application.Services;
+﻿using Microsoft.Extensions.Logging;
+
+namespace WireGuardManager.Application.Services;
 
 public interface IWireGuardService
 {
@@ -6,4 +8,25 @@ public interface IWireGuardService
 
 public class WireGuardService : IWireGuardService
 {
+    private readonly ILogger<WireGuardService> _logger;
+
+    public WireGuardService(ILogger<WireGuardService> logger)
+    {
+        _logger = logger;
+    }
+
+    public async Task StartInterface(string name)
+    {
+        throw new NotImplementedException();
+    }
+
+    public async Task StopInterface(string name)
+    {
+        throw new NotImplementedException();
+    }
+
+    public async Task RestartInterface(string name)
+    {
+        throw new NotImplementedException();
+    }
 }

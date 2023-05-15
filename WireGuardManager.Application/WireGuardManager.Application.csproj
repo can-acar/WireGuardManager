@@ -18,6 +18,13 @@
 
     <ItemGroup>
         <ProjectReference Include="..\WireGuardManager.Domain\WireGuardManager.Domain.csproj" />
+        <ProjectReference Include="..\WireGuardManager.Infrastructure\WireGuardManager.Infrastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+        <HintPath>C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.5\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+      </Reference>
     </ItemGroup>
 
 </Project>

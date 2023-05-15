@@ -1,5 +1,15 @@
-﻿namespace WireGuardManager.Application.Commands;
+﻿using MediatR;
+using WireGuardManager.Domain.Requests;
+using WireGuardManager.Domain.Responses;
 
-public class AddInterfaceCommand
+namespace WireGuardManager.Application.Commands;
+
+public class AddInterfaceCommand : IRequest<AddInterfaceResponse>
 {
+    public AddInterfaceRequest Request { get; set; }
+
+    public AddInterfaceCommand(AddInterfaceRequest request)
+    {
+        Request = request;
+    }
 }
