@@ -13,3 +13,13 @@ public class AddInterfaceCommand : IRequest<AddInterfaceResponse>
         Request = request;
     }
 }
+
+public class GetAllInterfacesCommand : IRequest<AllInterfacesResponse>
+{
+    public GetAllInterfacesRequest Request { get; }
+
+    public GetAllInterfacesCommand(GetAllInterfacesRequest request)
+    {
+        Request = request;
+    }
+}

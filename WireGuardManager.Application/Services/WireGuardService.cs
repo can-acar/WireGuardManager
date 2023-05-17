@@ -2,10 +2,6 @@
 
 namespace WireGuardManager.Application.Services;
 
-public interface IWireGuardService
-{
-}
-
 public class WireGuardService : IWireGuardService
 {
     private readonly ILogger<WireGuardService> _logger;

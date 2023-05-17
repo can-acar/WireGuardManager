@@ -50,11 +50,11 @@ public class AddPeerRequestValidator : AbstractValidator<AddPeerRequest>
                 "Interface private key can only contain alphanumeric characters, plus signs, and forward slashes");
 
         // rule for interface listen port
-        RuleFor(x => x.Interface.ListenPort)
-            .NotEmpty()
-            .WithMessage("Interface listen port cannot be empty")
-            .Matches("^[0-9]+$")
-            .WithMessage("Interface listen port can only contain numeric characters");
+        // RuleFor(x => x.Interface.ListenPort)
+        //     .NotEmpty()
+        //     .WithMessage("Interface listen port cannot be empty")
+        //     .Matches("^[0-9]+$")
+        //     .WithMessage("Interface listen port can only contain numeric characters");
         // .InclusiveBetween(1, 65535, includeMin: true, includeMax: true)
         // .WithMessage("Interface listen port must be between 1 and 65535");
 
@@ -95,11 +95,11 @@ public class AddPeerRequestValidator : AbstractValidator<AddPeerRequest>
             .WithMessage("Peer persistent keepalive cannot be null");
 
         // rule for peer interface id
-        RuleFor(x => x.Interface.Id)
-            .NotEmpty()
-            .WithMessage("Peer interface id cannot be empty")
-            .Matches(@"^[0-9]+$")
-            .WithMessage("Peer interface id can only contain numeric characters");
+        // RuleFor(x => x.Interface.Id)
+        //     .NotEmpty()
+        //     .WithMessage("Peer interface id cannot be empty")
+        //     .Matches(@"^[0-9]+$")
+        //     .WithMessage("Peer interface id can only contain numeric characters");
 
         // rule for ipv4 address
         RuleFor(x => x.IpV4Address)

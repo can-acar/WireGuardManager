@@ -17,7 +17,3 @@ public class InterfaceService : IInterfaceService
     {
     }
 }
-
-public interface IInterfaceService
-{
-}

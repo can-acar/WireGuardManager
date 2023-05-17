@@ -1,5 +1,16 @@
-﻿namespace WireGuardManager.Application.Commands;
+﻿using MediatR;
+using WireGuardManager.Domain.Requests;
+using WireGuardManager.Domain.Responses;
 
-public class UpdateInterfaceCommand
+namespace WireGuardManager.Application.Commands;
+
+public class UpdateInterfaceCommand : IRequest<UpdateInterfaceResponse>
 {
+    public UpdateInterfaceRequest Request { get; }
+
+
+    public UpdateInterfaceCommand(UpdateInterfaceRequest request)
+    {
+        Request = request;
+    }
 }

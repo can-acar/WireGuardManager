@@ -3,10 +3,6 @@ using WireGuardManager.Infrastructure.Data;
 
 namespace WireGuardManager.Application.Services;
 
-public interface ITrafficMonitorService
-{
-}
-
 public class TrafficMonitorService : ITrafficMonitorService
 {
     private readonly ILogger<TrafficMonitorService> _logger;

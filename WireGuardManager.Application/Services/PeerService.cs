@@ -3,7 +3,3 @@
 public class PeerService : IPeerService
 {
 }
-
-public interface IPeerService
-{
-}
