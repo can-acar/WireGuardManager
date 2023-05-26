@@ -1,7 +1,7 @@
 ﻿using System.Net.Mime;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using WireGuardManager.Application.Commands;
+using WireGuardManager.Api.Commands;
 using WireGuardManager.Domain.Requests;
 using WireGuardManager.Domain.Responses;
 

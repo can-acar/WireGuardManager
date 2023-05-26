@@ -10,12 +10,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WireGuardManager.Domain", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WireGuardManager.Infrastructure", "WireGuardManager.Infrastructure\WireGuardManager.Infrastructure.csproj", "{2894BD6F-6817-4D8E-A3B7-51E4E3B85A58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WireGuardManager.Application", "WireGuardManager.Application\WireGuardManager.Application.csproj", "{30B1AA8B-4ED6-49BB-AE3B-959F3F52746B}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0A4ABC3F-A182-4560-B1F6-19B3421A1E10}"
-	ProjectSection(SolutionItems) = preProject
-		docker-compose.yml = docker-compose.yml
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,15 +30,10 @@ Global
 		{2894BD6F-6817-4D8E-A3B7-51E4E3B85A58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2894BD6F-6817-4D8E-A3B7-51E4E3B85A58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2894BD6F-6817-4D8E-A3B7-51E4E3B85A58}.Release|Any CPU.Build.0 = Release|Any CPU
-		{30B1AA8B-4ED6-49BB-AE3B-959F3F52746B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{30B1AA8B-4ED6-49BB-AE3B-959F3F52746B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{30B1AA8B-4ED6-49BB-AE3B-959F3F52746B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{30B1AA8B-4ED6-49BB-AE3B-959F3F52746B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C846A2BD-880A-4790-A746-6912DBAE1398} = {F9118D83-3F35-4722-A156-FA0406FE11FF}
 		{951B06ED-2C83-4448-9D1B-01FBB597442D} = {F9118D83-3F35-4722-A156-FA0406FE11FF}
 		{2894BD6F-6817-4D8E-A3B7-51E4E3B85A58} = {F9118D83-3F35-4722-A156-FA0406FE11FF}
-		{30B1AA8B-4ED6-49BB-AE3B-959F3F52746B} = {F9118D83-3F35-4722-A156-FA0406FE11FF}
 	EndGlobalSection
 EndGlobal

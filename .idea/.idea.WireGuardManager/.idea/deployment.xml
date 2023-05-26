@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="remote machine" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="remote machine">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$/WireGuardManager.sln" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Api/WireGuardManager.Api.csproj" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/WireGuardManager.Domain.csproj" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Infrastructure/WireGuardManager.Infrastructure.csproj" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/WireGuardManager.Application.csproj" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Api/Controllers/ApiControllerBase.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Api/Controllers/AuthController.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Api/Controllers/InterfaceController.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Api/Controllers/NetworkController.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Api/Controllers/UserController.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Api/logs/log-20230515.txt" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Api/Properties/launchSettings.json" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Api/obj/Debug/net7.0/WireGuardManager.Api.GlobalUsings.g.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Api/obj/Debug/net7.0/WireGuardManager.Api.AssemblyInfo.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Api/obj/Debug/net7.0/WireGuardManager.Api.GeneratedMSBuildEditorConfig.editorconfig" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Api/Program.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Api/Dockerfile.sample2" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Api/Dockerfile.sample" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Api/appsettings.Development.json" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Api/appsettings.json" web="/" />
+            <mapping local="C:/Program Files/dotnet/sdk/7.0.203/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_7_default.editorconfig" web="/" />
+            <mapping local="$PROJECT_DIR$/.dockerignore" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Entities/Interface.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Entities/JwtSettings.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Entities/Peer.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Entities/User.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Helpers/NetworkHelper.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Interfaces/IRepository.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Interfaces/IUnitOfWork.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Requests/AddInterfaceRequest.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Requests/AddPeerRequest.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Requests/DeleteInterfaceRequest.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Requests/DeletePeerRequest.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Requests/GetAllInterfacesRequest.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Requests/GetAllowedIpsRequest.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Requests/GetAllPeersRequest.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Requests/GetInterfacesRequest.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Requests/GetPeersRequest.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Requests/LoginRequest.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Requests/RegisterRequest.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Requests/UpdateInterfaceRequest.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Requests/UpdatePeerRequest.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Requests/UpdateUserRequest.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Responses/AddInterfaceResponse.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Responses/AddPeerResponse.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Responses/AllInterfacesResponse.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Responses/AuthenticateResponse.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Responses/DeleteInterfaceResponse.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Responses/JwtResponse.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Responses/LoginResponse.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/Responses/UpdateInterfaceResponse.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/obj/Debug/net7.0/WireGuardManager.Domain.AssemblyInfo.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Domain/obj/Debug/net7.0/WireGuardManager.Domain.GeneratedMSBuildEditorConfig.editorconfig" web="/" />
+            <mapping local="C:/Program Files/dotnet/sdk/7.0.203/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_7_default.editorconfig" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Infrastructure/Data/ApplicationDbContext.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Infrastructure/Extensions/AppExtensions.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Infrastructure/Extensions/ServiceCollectionExtensions.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Infrastructure/Repositories/Repository.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Infrastructure/Repositories/UnitOfWork.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Infrastructure/Utils/WireguardActions.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Infrastructure/obj/Debug/net7.0/WireGuardManager.Infrastructure.GlobalUsings.g.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Infrastructure/obj/Debug/net7.0/WireGuardManager.Infrastructure.AssemblyInfo.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Infrastructure/obj/Debug/net7.0/WireGuardManager.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig" web="/" />
+            <mapping local="C:/Program Files/dotnet/sdk/7.0.203/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_7_default.editorconfig" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/Commands/AddInterfaceCommand.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/Commands/AddPeerCommand.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/Commands/AuthenticateCommand.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/Commands/DeleteInterfaceCommand.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/Commands/LoginCommand.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/Commands/UpdateInterfaceCommand.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/Handlers/AddInterfaceCommandHandler.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/Handlers/AddPeerCommandHandler.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/Services/IInterfaceService.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/Services/InterfaceService.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/Services/IPeerService.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/Services/ITokenService.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/Services/ITrafficMonitorService.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/Services/IWireGuardService.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/Services/PeerService.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/Services/TokenService.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/Services/TrafficMonitorService.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/Services/WireGuardService.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/Validators/AddInterfaceRequestValidator.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/Validators/AddPeerRequestValidator.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/Validators/DeleteInterfaceRequestValidator.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/Validators/GetInterfaceRequestValidator.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/Validators/LoginRequestValidator.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/Validators/RegisterRequestValidator.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/Validators/UpdateInterfaceRequestValidator.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/Validators/UpdatePeerRequestValidator.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/Validators/UpdateUserPasswordRequestValidator.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/Validators/UpdateUserRequestValidator.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/obj/Debug/net7.0/WireGuardManager.Application.GlobalUsings.g.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/obj/Debug/net7.0/WireGuardManager.Application.AssemblyInfo.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Application/obj/Debug/net7.0/WireGuardManager.Application.GeneratedMSBuildEditorConfig.editorconfig" web="/" />
+            <mapping local="C:/Program Files/dotnet/sdk/7.0.203/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_7_default.editorconfig" web="/" />
+            <mapping local="$PROJECT_DIR$/WireGuardManager.Api/Dockerfile" web="/" />
+            <mapping local="$PROJECT_DIR$/.dockerignore" web="/" />
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

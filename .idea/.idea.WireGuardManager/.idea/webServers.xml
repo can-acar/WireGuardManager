@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="720ac27c-5b0e-44d9-a6a1-a6448910aff2" name="remote machine" url="http://localhost">
+        <fileTransfer rootFolder="/mnt/d/Projects/WireGuardManager" accessType="SFTP" host="localhost" port="22" sshConfigId="44d2e3b1-8723-4cd5-80ed-a6d1836a044a" sshConfig="r00t@localhost:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

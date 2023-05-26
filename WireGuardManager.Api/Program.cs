@@ -1,6 +1,10 @@
 using System.Reflection;
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using MediatR;
+using MediatR.Extensions.FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.OpenApi.Models;
 using NewRelic.LogEnrichers.Serilog;
@@ -10,9 +14,9 @@ using Serilog;
 using Serilog.Events;
 using Serilog.Exceptions;
 using Serilog.Sinks.SystemConsole.Themes;
-using WireGuardManager.Application.Services;
-using WireGuardManager.Infrastructure.Data;
+using WireGuardManager.Api.Modules;
 using WireGuardManager.Infrastructure.Extensions;
+using WireGuardManager.Infrastructure.Utils;
 
 try
 {
@@ -21,7 +25,8 @@ try
     var host = builder.Host;
     var services = builder.Services;
 
-    host.ConfigureLogging(x => x.ClearProviders().AddSerilog())
+    host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
+        .ConfigureLogging(x => x.ClearProviders().AddSerilog())
         .UseSerilog(((ctx, lc) =>
         {
             if (builder.Environment.IsDevelopment())
@@ -50,25 +55,38 @@ try
                 .ReadFrom.Configuration(ctx.Configuration);
         }));
 
+    host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
+    {
+        containerBuilder.RegisterModule(new AppModule());
 
-    services.AddControllers();
+        //containerBuilder.RegisterDbContext<ApplicationDbContext>("Db");
+    });
+    builder.WebHost.UseKestrel()
+        .UseQuic()
+        .UseIISIntegration()
+        .UseSockets()
+        .UseContentRoot(Directory.GetCurrentDirectory());
+
+
+    // get namespace  assembly
+
     services.AddCors();
     services.AddEndpointsApiExplorer();
     services.AddSwaggerGen(
         c => { c.SwaggerDoc("v1", new OpenApiInfo {Title = "WireguardManage.API", Version = "v1"}); });
     services.AddOptions();
     services.AddHealthChecks();
-    services.AddFluentValidationAutoValidation();
+    services.AddFluentValidationAutoValidation().AddFluentValidationClientsideAdapters();
+    services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingBehaviour<,>));
+    services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
     services.AddValidatorsFromAssembly(assemblies);
     services.AddMediatR(cfg => { cfg.RegisterServicesFromAssembly(assemblies); });
-    services.AddSingleton<IWireGuardService, WireGuardService>();
-    services.AddSingleton<ITrafficMonitorService, TrafficMonitorService>();
-    services.AddSingleton<ITokenService, TokenService>();
-    services.AddDbContext<ApplicationDbContext>();
+
+
 //services.ConfigureInfrastructureServices();
     services.AddSwaggerGen();
 
-
+    services.Configure<IISOptions>(options => { options.ForwardClientCertificate = false; });
     services.Configure<FormOptions>(o =>
     {
         o.ValueLengthLimit = int.MaxValue;
@@ -78,8 +96,35 @@ try
         o.MultipartHeadersLengthLimit = int.MaxValue;
     });
 
+    services.AddControllers().ConfigureApiBehaviorOptions(options =>
+        {
+            options.SuppressConsumesConstraintForFormFileParameters = true;
+            options.SuppressInferBindingSourcesForParameters = true;
+            options.SuppressModelStateInvalidFilter = true;
+            options.SuppressMapClientErrors = true;
+            options.ClientErrorMapping[404]
+                .Link = "https://httpstatuses.com/404";
+        })
+        .AddNewtonsoftJson(options =>
+        {
+            options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+            options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+            options.SerializerSettings.Formatting = Formatting.None;
+            options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            options.SerializerSettings.ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor;
+            options.SerializerSettings.DefaultValueHandling = DefaultValueHandling.Include;
+            options.SerializerSettings.DateFormatHandling = DateFormatHandling.IsoDateFormat;
+            options.SerializerSettings.DateParseHandling = DateParseHandling.DateTimeOffset;
+            options.SerializerSettings.DateFormatString = "dd.MM.yyyy HH:mm:ss";
+            options.SerializerSettings.DateTimeZoneHandling = DateTimeZoneHandling.Local;
+            options.SerializerSettings.FloatFormatHandling = FloatFormatHandling.String;
+            options.SerializerSettings.FloatParseHandling = FloatParseHandling.Double;
+        });
+
 
     var app = builder.Build();
+
+    ((IApplicationBuilder) app).ApplicationServices.GetAutofacRoot();
 
     if (app.Environment.IsDevelopment())
     {

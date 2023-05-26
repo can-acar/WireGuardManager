@@ -1,7 +1,7 @@
 ﻿using System.Net.Mime;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using WireGuardManager.Application.Commands;
+using WireGuardManager.Api.Commands;
 using WireGuardManager.Domain.Requests;
 
 namespace WireGuardManager.Api.Controllers;
@@ -21,8 +21,11 @@ public class InterfaceController : ControllerBase
         _mediator = mediator;
     }
 
-/*("{interfaceName}"), ProducesResponseType(StatusCodes.Status201Created)*/
     [HttpPost]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> AddInterface([FromBody] AddInterfaceRequest request)
     {
         try
@@ -44,6 +47,10 @@ public class InterfaceController : ControllerBase
     }
 
     [HttpPost]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> AddPeer([FromBody] AddPeerRequest request)
     {
         try
@@ -68,6 +75,10 @@ public class InterfaceController : ControllerBase
 
 
     [HttpPost]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> DeleteInterface([FromBody] DeleteInterfaceRequest request)
     {
         try
@@ -87,6 +98,10 @@ public class InterfaceController : ControllerBase
     }
 
     [HttpPost]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> UpdateInterface([FromBody] UpdateInterfaceRequest request)
     {
         try
@@ -108,6 +123,10 @@ public class InterfaceController : ControllerBase
     }
 
     [HttpPost]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> AllInterfaces([FromBody] GetAllInterfacesRequest request)
     {
         try
